@@ -60,6 +60,12 @@ bot.on('message', message => {
         }
     }
 
+    if (message.content === '!chara test') {
+        //TEST
+        var Time = new.Date();
+        message.channel.send(Time);
+    }
+
     if (message.content === '!chara game'){ // SI le message reçu est "!chara game" ALORS
         message.channel.send("Jouons à un jeu")
         message.channel.send("Dit moi un chiffre entre 1 et 9")
