@@ -15,7 +15,13 @@ const bot = new Discord.Client()
 //Mise en ligne
 bot.on('ready', function () {
     console.log("Je suis connecté !")
-    bot.user.setActivity("UNDERTALE", { type: "PLAYING"})
+    while (1){
+        bot.user.setActivity("UNDERTALE", { type: "PLAYING"})
+        sleep(15000);
+        bot.user.setActivity("DELTARUNE", { type: "PLAYING"})
+        sleep(15000);
+    }
+
 })
 
 //Variable boolean
