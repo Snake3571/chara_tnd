@@ -62,8 +62,7 @@ bot.on('message', message => {
 
     if (message.content === '!chara test') {
         //TEST
-        var Time = new.Date();
-        message.channel.send(Time);
+        message.channel.send('Zone de test')
     }
 
     if (message.content === '!chara game'){ // SI le message reçu est "!chara game" ALORS
