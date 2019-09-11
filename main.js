@@ -135,7 +135,7 @@ bot.on('message', message => {
                 message.reply('Je suis dans le salon vocal !')
                 message.channel.send("Musique en cours de lecture : Stronger than You - Chara Response")
                 const dispatcher = connection.playFile('bot.mp3')
-                // dispatcher.setVolume(0.5)
+                dispatcher.setVolume(0.5)
                 bot.user.setActivity("une chanson", { type: "LISTENING"})
                 bot.user.setStatus('dnd')
                 /*dispatcher.on("end", end => 
