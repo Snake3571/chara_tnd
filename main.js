@@ -105,8 +105,7 @@ bot.on('message', message => {
                         isReady = false;
                         message.channel.send("Chargement en cours. . .");
                         const lien = ytdl(message.content, { filter : 'audioonly' });
-                        const streamOptions = { seek: 0, volume: 1 };
-                        const dispatcher = connection.playStream(lien, streamOptions);
+                        const dispatcher = connection.playStream(lien);
                         message.channel.send("Chargement terminé !");
                         bot.user.setActivity("une vidéo YouTube", { type: "LISTENING"})
                         bot.user.setStatus('dnd')
