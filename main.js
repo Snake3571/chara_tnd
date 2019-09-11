@@ -138,13 +138,13 @@ bot.on('message', message => {
                 dispatcher.setVolume(0.5)
                 bot.user.setActivity("une chanson", { type: "LISTENING"})
                 bot.user.setStatus('dnd')
-                /*dispatcher.on("end", end => 
+                dispatcher.on("end", end => 
                 {
                     message.member.voiceChannel.leave();
                     bot.user.setActivity("UNDERTALE", { type: "PLAYING"})
                     bot.user.setStatus('online')
                     isReady = true;
-                })*/
+                })
             })
             .catch(console.log);
         } else {
