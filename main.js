@@ -98,16 +98,16 @@ bot.on('message', message => {
             message.member.voiceChannel.join().then(connection => 
             {
                 message.reply("Donne moi un lien YouTube stp et je chanterai :wink:");
-                message.reply("Tu as 10 secondes. . .")
+                message.reply("Tu as 10 secondes. . .");
                 const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
                 console.log(collector)
                 collector.on('collect', message => {
                     if (message.author != null) {
-                        isReady = false
+                        isReady = false;
                         message.channel.send("Chargement en cours. . .");
-                        const lien = message.content
+                        const lien = message.author;
                         const dispatcher = connection.playStream(ytdl(lien));
-                        dispatcher.setVolume(0.5)
+                        dispatcher.setVolume(0.5);
                         message.channel.send("Chargement terminé !");
                         bot.user.setActivity("une vidéo YouTube", { type: "LISTENING"})
                         bot.user.setStatus('dnd')
@@ -115,7 +115,7 @@ bot.on('message', message => {
                         {
                             message.member.voiceChannel.leave();
                             bot.user.setActivity("UNDERTALE", { type: "PLAYING"})
-                            bot.user.setStatus('online')
+                            bot.user.setStatus('online');
                             isReady = true;
                         })
                     }
