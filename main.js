@@ -124,8 +124,6 @@ bot.on('message', message => {
         }else{
             message.reply('Connecte toi dans un salon vocal et réessaye stp');
         }
-    } else if (isReady == false){
-        message.reply('Réessaie plus tard stp')
     }
 
     if (isReady == true && message.content === '!chara song') {
@@ -152,8 +150,6 @@ bot.on('message', message => {
         } else {
         message.reply('Connecte toi dans un salon vocal et réessaye stp');
         }
-    } else if (isReady == false){
-        message.reply('Réessaie plus tard stp')
     }
 
     if (message.content === '!chara truth'){
