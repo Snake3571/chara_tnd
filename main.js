@@ -100,7 +100,6 @@ bot.on('message', message => {
                 message.reply("Donne moi un lien YouTube stp et je chanterai :wink:");
                 message.reply("Tu as 10 secondes. . .");
                 const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-                console.log(collector)
                 collector.on('collect', message => {
                     if (message.author != null) {
                         isReady = false;
@@ -135,17 +134,17 @@ bot.on('message', message => {
                 isReady = false;
                 message.reply('Je suis dans le salon vocal !')
                 message.channel.send("Musique en cours de lecture : Stronger than You - Chara Response")
-                const dispatcher = connection.playFile('bot.mp3')
-                dispatcher.setVolume(0.5)
+                // const dispatcher = connection.playFile('bot.mp3')
+                // dispatcher.setVolume(0.5)
                 bot.user.setActivity("une chanson", { type: "LISTENING"})
                 bot.user.setStatus('dnd')
-                dispatcher.on("end", end => 
+                /*dispatcher.on("end", end => 
                 {
                     message.member.voiceChannel.leave();
                     bot.user.setActivity("UNDERTALE", { type: "PLAYING"})
                     bot.user.setStatus('online')
                     isReady = true;
-                })
+                })*/
             })
             .catch(console.log);
         } else {
