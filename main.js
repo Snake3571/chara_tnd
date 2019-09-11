@@ -271,6 +271,30 @@ bot.on('message', message => {
                         message.reply("Tu nous FATIGUES, tu nous FATIGUES");
                         break;
                 }
+            } else if (message.content === 'Comafuret95' || message.content === 'comafuret95' || message.content === 'Comafuret' || message.content === 'Coma' || message.content === 'coma'){
+                message.channel.send("Tu parles du suisse ?")
+                var quote = Math.round(Math.random() * 3 - 0.5);
+                switch (quote){
+                    case 0 :
+                        message.reply("Il dit toujours à Snake 'I'M A BOSS !'");
+                        sleep(2000)
+                        message.reply("Quelqu'un à la référence ?")
+                        break;
+                    case 1 : 
+                        message.reply("A t-il des chocolats :chocolate_bar: pour moi ?")
+                        sleep(2000)
+                        message.reply("Je reformule")
+                        sleep(2000)
+                        message.reply("Il A des chocolats :chocolate_bar: pour MOI ?")
+                        break;
+                    case 2 : 
+                        message.reply("J'ai un profond respect pour lui tu sais")
+                        sleep(2000)
+                        message.reply("Ce n'est pas rien de faire l'armée")
+                        sleep(1000)
+                        message.reply("Personnellement, je n'aurais pas la patience")
+                        break;
+                }
             }
         })
     }
