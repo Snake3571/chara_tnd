@@ -150,6 +150,10 @@ bot.on('message', message => {
         } else {
         message.reply('Connecte toi dans un salon vocal et réessaye stp');
         }
+
+        if (isReady != true){
+            message.reply('Réessaie plus tard stp')
+        }
     }
 
     if (message.content === '!chara truth'){
