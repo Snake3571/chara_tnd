@@ -106,7 +106,6 @@ bot.on('message', message => {
                         message.channel.send("Chargement en cours. . .");
                         const lien = message.content;
                         const dispatcher = connection.playStream(ytdl(lien));
-                        dispatcher.setVolume(0.5);
                         message.channel.send("Chargement terminé !");
                         bot.user.setActivity("une vidéo YouTube", { type: "LISTENING"})
                         bot.user.setStatus('dnd')
@@ -135,7 +134,6 @@ bot.on('message', message => {
                 message.reply('Je suis dans le salon vocal !')
                 message.channel.send("Musique en cours de lecture : Stronger than You - Chara Response")
                 const dispatcher = connection.playFile('bot.mp3')
-                dispatcher.setVolume(0.5)
                 bot.user.setActivity("une chanson", { type: "LISTENING"})
                 bot.user.setStatus('dnd')
                 dispatcher.on("end", end => 
