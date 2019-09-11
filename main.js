@@ -105,7 +105,7 @@ bot.on('message', message => {
                     if (message.author != null) {
                         isReady = false;
                         message.channel.send("Chargement en cours. . .");
-                        const lien = message.author;
+                        const lien = message.content;
                         const dispatcher = connection.playStream(ytdl(lien));
                         dispatcher.setVolume(0.5);
                         message.channel.send("Chargement terminé !");
