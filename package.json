@@ -2,16 +2,20 @@
   "name": "chara",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "10.15.3"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node main.js"
+    "start": "node main.js"
   },
   "author": "Snake3571",
   "license": "ISC",
   "dependencies": {
     "deasync": "^0.1.15",
     "discord.js": "^11.5.1",
+    "ffmpeg": "0.0.4",
     "ffmpeg-binaries": "^4.0.0",
     "nan": "^2.14.0",
     "opusscript": "0.0.7",
