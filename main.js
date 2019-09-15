@@ -294,6 +294,51 @@ bot.on('message', message => {
                         message.reply("Personnellement, je n'aurais pas la patience")
                         break;
                 }
+            } else if (message.content === 'ChanceCoquin' || message.content === 'Chancecoquin' || message.content === 'chancecoquin'){
+                message.channel.send('Alors ChanceCoquin. . .');
+                var quote = Math.round(Math.random() * 3 - 0.5);
+                switch (quote){
+                    case 0 :
+                        message.reply("De toute façon, il a la science infuse. Personne ne peut lutter.");
+                        sleep(1500);
+                        message.reply('Il sait tout. Dans le moindre détail.')
+                        break;
+                    case 1 : 
+                        message.reply("Quelqu'un peut m'expliquer son image de profil discord ?")
+                        sleep(2000);
+                        message.reply('SVP ? :smirk:')
+                        break;
+                    case 2 : 
+                        message.reply("Alors comme ça il habite l'immeuble :smirk:")
+                        sleep(1500)
+                        message.reply("Comme c'est sympa")
+                        break;
+                }
+
+            } else if (message.content === 'ChanceCoquine' || message.content === 'Chancecoquine' || message.content === 'chancecoquine'){
+                message.channel.send("La ch'tite ChanceCoquine. . .");
+                var quote = Math.round(Math.random() * 3 - 0.5);
+                switch (quote){
+                    case 0 :
+                        message.reply("Tu as beaucoup de chance d'avoir . . .");
+                        sleep(1000);
+                        message.reply("Euh...");
+                        sleep(1000);
+                        message.reply("CHANCEcoquin à t'es côté ?");
+                        sleep(1500);
+                        message.reply("Désolé, les jeux de mots, ça me fatigue.")
+                        break;
+                    case 1 : 
+                        message.reply("ET DEUX RICARDS POUR LA TABLE 3, DEUX");
+                        break;
+                    case 2 : 
+                        message.reply("J'aurais cru que c'était la FIN du monde dans la maison.")
+                        sleep(1500)
+                        message.reply("Mais non.")
+                        sleep(1500)
+                        message.reply("Ce n'était que les Chances.")
+                        break;
+                }
             }
         })
     }
