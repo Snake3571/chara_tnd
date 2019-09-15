@@ -62,7 +62,7 @@ bot.on('message', message => {
 
     if (message.content === '!chara test') {
         const filter = m => m.content.startsWith('!chara test');
-        channel.awaitMessages(filter, { max: 4, time: 60000, errors: ['time'] })
+        message.channel.awaitMessages(filter, { max: 4, time: 60000, errors: ['time'] })
             .then(collected => console.log(collected.size))
             .catch(collected => console.log(`After a minute, only ${collected.size} out of 4 voted.`));
         message.channel.send('Zone de test')
