@@ -383,8 +383,29 @@ bot.on('message', message => {
                     case 2 : 
                         message.reply("J'ai trouvé Shamo dans la rue.")
                         sleep(1000);
-                        message.reply("Regarder");
+                        message.reply("Regardez :");
                         message.reply("https://images3.memedroid.com/images/UPLOADED195/5b9a591077897.jpeg")
+                        break;
+                }
+            } else if (message.content === 'Perry' || message.content === 'perry'){
+                message.channel.send("Perry l'ornithorynque. . .");
+                var quote = Math.round(Math.random() * 3 - 0.5);
+                switch (quote){
+                    case 0 :
+                        message.reply("Je vous le jure !")
+                        message.reply("Il est là et d'un coup pof, téléporté à l'autre bout.")
+                        message.reply("Quel est cet sorte de magie ?")
+                        message.reply("Lag ?")
+                        message.reply("Connais pas.")
+                        break;
+                    case 1 : 
+                        message.reply("Il s'entend bien avec Shamo.")
+                        message.reply("Comme preuve, je plains la pauvre bouteille qui se nommait 'La Chartreuse'.")
+                        message.reply("Elle a pas vécu longtemps.")
+                        break;
+                    case 2 : 
+                        message.reply("Je l'ai trouvé à faire le pitre à l'université xD")
+                        message.reply("https://www.youtube.com/watch?v=m3YCOOAgQ58&t=46s")
                         break;
                 }
             }
