@@ -60,7 +60,7 @@ bot.on('message', message => {
         }
     }
 
-    if (message.content === '!chara test') {
+    if (message.content === '!chara test') { //isReady
         const filter = m => m.content.startsWith('!chara test');
         message.channel.awaitMessages(filter, { max: 4, time: 60000, errors: ['time'] })
             .then(collected => message.reply(collected.size))
@@ -172,6 +172,7 @@ bot.on('message', message => {
                         break;
                     case 2 : 
                         message.reply("Le connard d'Or hein ? Je laisse ma place, il le mérite amplement");
+                        message.reply("https://el-manchar.com/wp-content/uploads/2018/12/connard-1.jpg")
                         break;
                 }
             } else if (message.content === 'Tiberias 84' || message.content === 'Tiberias' || message.content === 'tibe' || message.content === 'Tibe' || message.content === 'tibé' || message.content === 'Tibé'){
@@ -233,6 +234,7 @@ bot.on('message', message => {
                         message.reply("J'ai appris quelque chose grâce à lui !");
                         sleep(2000);
                         message.reply("Le Titan, il a une barricade.")
+                        message.reply("http://wmackey.com/statespace/wp-content/uploads/2017/09/d2_pvp_action_03-1520x1000.jpg");
                         break;
                 }
             } else if (message.content === 'MCR3306' || message.content === 'mcr3306' || message.content === 'Mcr' || message.content === 'mcr' || message.content === 'MCR'){
@@ -251,6 +253,7 @@ bot.on('message', message => {
                         break;
                     case 2 : 
                         message.reply("Ils sont là. . . Ils sont dans nos campagnes, dans les villes. . .");
+                        message.reply("https://img.bfmtv.com/i/0/0//8da/61a506ce8b70194d76ad40836fb9c.jpeg");
                         break;
                 }
             } else if (message.content === 'MPH3306' || message.content === 'mph3306' || message.content === 'Mph' || message.content === 'mph' || message.content === 'MPH'){
@@ -287,7 +290,7 @@ bot.on('message', message => {
                         sleep(2000)
                         message.reply("Je reformule")
                         sleep(2000)
-                        message.reply("Il A des chocolats :chocolate_bar: pour MOI ?")
+                        message.reply("Il A des chocolats :chocolate_bar: pour MOI =) ?")
                         break;
                     case 2 : 
                         message.reply("J'ai un profond respect pour lui tu sais")
@@ -335,11 +338,53 @@ bot.on('message', message => {
                         message.reply("ET DEUX RICARDS POUR LA TABLE 3, DEUX");
                         break;
                     case 2 : 
-                        message.reply("J'aurais cru que c'était la FIN du monde dans la maison.")
+                        message.reply("J'aurais cru que c'était la FIN du monde dans cette maison.")
                         sleep(1500)
                         message.reply("Mais non.")
                         sleep(1500)
                         message.reply("Ce n'était que les Chances.")
+                        break;
+                }
+            } else if (message.content === 'Denver' || message.content === 'denver' || message.content === 'DinosaureBen' || message.content === 'Dinosaureben' || message.content === 'dinosaureben'){
+                message.channel.send("Le dernier dinosaure. . .");
+                var quote = Math.round(Math.random() * 3 - 0.5);
+                switch (quote){
+                    case 0 :
+                        message.reply('Je pensais que les dinosaure avaient disparu définitivement.')
+                        sleep(1000);
+                        message.reply('Denver est la preuve que non.')
+                        break;
+                    case 1 : 
+                        message.reply("J'espère que tu es content maintenant");
+                        sleep(1000);
+                        message.reply("J'ai la chanson dans la tête :upside_down:");
+                        message.reply("https://www.youtube.com/watch?v=uzcsqG35ib4&t=13s")
+                        break;
+                    case 2 : 
+                        message.reply("Un dinosaure chinois ?");
+                        sleep(1000);
+                        message.reply("Désolé, je connais pas.")
+                        break;
+                }
+            } else if (message.content === 'GenieShamo' || message.content === 'Genieshamo' || message.content === 'genieshamo' || message.content === 'Genie' || message.content === 'genie' || message.content === 'Shamo' || message.content === 'shamo'){
+                message.channel.send("Le Chameau sauvage. . .");
+                var quote = Math.round(Math.random() * 3 - 0.5);
+                switch (quote){
+                    case 0 :
+                        message.reply("J'ai entendu dire qu'il tient bien l'alcool.")
+                        sleep(2000);
+                        message.reply("Ça me plaît =)")
+                        break;
+                    case 1 : 
+                        message.reply("Les pubs qu'il côtoie, c'est comme les ennemis qu'il croise.")
+                        sleep(1000);
+                        message.reply('Ils tombent les uns après les autres.')
+                        break;
+                    case 2 : 
+                        message.reply("J'ai trouvé Shamo dans la rue.")
+                        sleep(1000);
+                        message.reply("Regarder");
+                        message.reply("https://images3.memedroid.com/images/UPLOADED195/5b9a591077897.jpeg")
                         break;
                 }
             }
