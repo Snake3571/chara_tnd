@@ -15,7 +15,7 @@ const bot = new Discord.Client()
 //Mise en ligne
 bot.on('ready', function () {
     console.log("Je suis connecté !")
-    bot.user.setActivity("UNDERTALE", { type: "PLAYING"})
+    etatChara();
 })
 
 //Variable boolean
@@ -115,7 +115,7 @@ bot.on('message', message => {
                         dispatcher.on("end", end => 
                         {
                             message.member.voiceChannel.leave();
-                            bot.user.setActivity("UNDERTALE", { type: "PLAYING"})
+                            etatChara();
                             bot.user.setStatus('online');
                             isReady = true;
                         })
@@ -142,7 +142,7 @@ bot.on('message', message => {
                 dispatcher.on("end", end => 
                 {
                     message.member.voiceChannel.leave();
-                    bot.user.setActivity("UNDERTALE", { type: "PLAYING"})
+                    etatChara();
                     bot.user.setStatus('online')
                     isReady = true;
                 })
@@ -158,7 +158,6 @@ bot.on('message', message => {
         message.channel.send("Qui va t'on jugé aujourd'hui ?")
         message.reply('Dit moi un nom. . .')
         const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-        console.log(collector)
         collector.on('collect', message => {
             if (message.content === 'Lefaser' || message.content === 'lefaser' || message.content === 'faser' || message.content === 'Faser'){
                 message.channel.send("Lefaser hum. . .")
@@ -414,3 +413,20 @@ bot.on('message', message => {
 })
 
 bot.login(process.env.TOKEN);
+
+//ETAT RANDOM CHARA
+
+function etatChara(){
+    var etat = Math.round(Math.random() * 3 - 0.5);
+    switch (etat){
+        case 0 : 
+            bot.user.setActivity("UNDERTALE", { type: "PLAYING"});
+            break;
+        case 1 :
+            bot.user.setActivity("son combat contre Sans", { type: "STREAMING"});
+            break;
+        case 2 :
+            bot.user.setActivity("des animés", { type: "WATCHING"});
+            break;
+    }
+}
