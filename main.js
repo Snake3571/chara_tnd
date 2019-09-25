@@ -61,11 +61,7 @@ bot.on('message', message => {
     }
 
     if (message.content === '!chara test') { //isReady
-        const filter = m => m.content.startsWith('!chara test');
-        message.channel.awaitMessages(filter, { max: 4, time: 60000, errors: ['time'] })
-            .then(collected => message.reply(collected.size))
-            .catch(collected => message.reply(`After a minute, only ${collected.size} out of 4 voted.`));
-        message.channel.send('Zone de test')
+        etatChara();
     }
 
     if (message.content === '!chara game'){ // SI le message reçu est "!chara game" ALORS
