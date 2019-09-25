@@ -413,13 +413,14 @@ bot.login(process.env.TOKEN);
 //ETAT RANDOM CHARA
 
 function etatChara(){
-    var etat = Math.round(Math.random() * 3 - 0.5);
+    var etat = Math.round(Math.random() * 4 - 0.5);
+    message.reply(etat);
     switch (etat){
         case 0 : 
             bot.user.setActivity("UNDERTALE", { type: "PLAYING"});
             break;
         case 1 :
-            bot.user.setActivity("son combat contre Sans", { type: "STREAMING"});
+            bot.user.setActivity("En train de combattre contre Sans");
             break;
         case 2 :
             bot.user.setActivity("des animés", { type: "WATCHING"});
