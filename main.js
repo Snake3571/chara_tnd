@@ -414,7 +414,7 @@ bot.login(process.env.TOKEN);
 
 function etatChara(){
     var etat = Math.round(Math.random() * 4 - 0.5);
-    message.reply(etat);
+    console.log(etat);
     switch (etat){
         case 0 : 
             bot.user.setActivity("UNDERTALE", { type: "PLAYING"});
