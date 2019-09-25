@@ -413,17 +413,26 @@ bot.login(process.env.TOKEN);
 //ETAT RANDOM CHARA
 
 function etatChara(){
-    var etat = Math.round(Math.random() * 4 - 0.5);
+    var etat = Math.round(Math.random() * 6 - 0.5);
     console.log(etat);
     switch (etat){
         case 0 : 
             bot.user.setActivity("UNDERTALE", { type: "PLAYING"});
             break;
         case 1 :
-            bot.user.setActivity("En train de combattre contre Sans");
+            bot.user.setActivity("combattre Sans"), { type: "PLAYING"};
             break;
         case 2 :
             bot.user.setActivity("des animés", { type: "WATCHING"});
+            break;
+        case 3 :
+            bot.user.setActivity("des choses pour adultes", { type: "WATCHING"});
+            break;
+        case 4 :
+            bot.user.setActivity("des comptines pour enfants" , { type: "LISTENING"});
+            break;
+        case 5 :
+            bot.user.setActivity("Frisk manger du chocolat" , { type: "WATCHING"});
             break;
     }
 }
