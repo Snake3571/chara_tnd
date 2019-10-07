@@ -1,3 +1,7 @@
+exports.myDateTime = function () {
+    return Date();
+}; 
+
 function truth (pseudo){
     if (pseudo === 'Lefaser' || pseudo === 'lefaser' || pseudo === 'faser' || pseudo === 'Faser'){
         message.channel.send("Lefaser hum. . .")
