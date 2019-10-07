@@ -2,11 +2,7 @@
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
 
-var fs = require("fs");
-var vm = require('vm');
-
-var content = fs.readFileSync(truth.js);
-vm.runInThisContext(content);
+vm.runInThisContext(fs.readFileSync(__dirname + "/truth.js"))
 
 //Tableau commande bot
 var help = ["Ne t'inquiétes pas mon chou :wink:", 'Voici la liste des commandes', 
