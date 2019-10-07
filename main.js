@@ -153,7 +153,7 @@ bot.on('message', message => {
         message.channel.send("Alors, alors, alors. . .")
         message.channel.send("Qui va t'on jugé aujourd'hui ?")
         message.reply('Dit moi un nom. . .')
-        truth();
+        truth(message);
     }
 })
 
@@ -185,7 +185,7 @@ function etatChara(){
     }
 }
 
-function truth(){
+function truth(message){
     const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
     collector.on('collect', message => {
         if (message.content === 'Lefaser' || message.content === 'lefaser' || message.content === 'faser' || message.content === 'Faser'){
