@@ -1,6 +1,7 @@
 //Import des fonctions discord + YouTube
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
+const Traveler = require('the-traveler')
 
 //Tableau commande bot
 var help = ["Ne t'inquiétes pas mon chou :wink:", 'Voici la liste des commandes', 
@@ -67,6 +68,7 @@ bot.on('message', message => {
 
     if (message.content === '!chara test') { //isReady
         etatChara();
+        traveler.
     }
 
     if (message.content === '!chara game'){ // SI le message reçu est "!chara game" ALORS
