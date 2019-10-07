@@ -186,11 +186,11 @@ function etatChara(){
 }
 
 function truth(message){
+    var quote = Math.round(Math.random() * 3 - 0.5);
     const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
     collector.on('collect', message => {
         if (message.content === 'Lefaser' || message.content === 'lefaser' || message.content === 'faser' || message.content === 'Faser'){
             message.channel.send("Lefaser hum. . .")
-            var quote = Math.round(Math.random() * 3 - 0.5);
             switch (quote){
                 case 0 : 
                     message.reply("Tu savais que Faser n'aime pas les courants éléctriques ? Il n'aime pas les DÉFASAGES");
@@ -205,7 +205,6 @@ function truth(message){
             }
         } else if (message.content === 'Tiberias 84' || message.content === 'Tiberias' || message.content === 'tibe' || message.content === 'Tibe' || message.content === 'tibé' || message.content === 'Tibé'){
             message.channel.send("Mr Tiberias. . . C'est un cas celui là. . .")
-            var quote = Math.round(Math.random() * 3 - 0.5);
             switch (quote){
                 case 0 : 
                     message.reply("Je cherche une réponse. Attendez. . .");
@@ -223,7 +222,6 @@ function truth(message){
             }
         } else if (message.content === 'Chapito' || message.content === 'chapito' || message.content === 'Chapi' || message.content === 'chapi'){
             message.channel.send("Chapi Chapi Chapo... Pardon. Donc Chapito. . .")
-            var quote = Math.round(Math.random() * 3 - 0.5);
             switch (quote){
                 case 0 : 
                     message.reply("J'ai trouvé le mot 'Chapito' dans la définition du mot 'Désolé'.");
@@ -246,7 +244,6 @@ function truth(message){
             }
         } else if (message.content === 'Snake3571' || message.content === 'Snake' || message.content === 'snake' || message.content === 'snake3571'){
             message.channel.send("Snake. . . Que dire de lui ?")
-            var quote = Math.round(Math.random() * 3 - 0.5);
             switch (quote){
                 case 0 : 
                     message.reply("J'ai entendu dire qu'il avait terrassé Riven à lui tout seul.");
@@ -267,7 +264,6 @@ function truth(message){
             }
         } else if (message.content === 'MCR3306' || message.content === 'mcr3306' || message.content === 'Mcr' || message.content === 'mcr' || message.content === 'MCR'){
             message.channel.send("Mademoiselle MCR. . .")
-            var quote = Math.round(Math.random() * 3 - 0.5);
             switch (quote){
                 case 0 : 
                     message.reply("Je l'entendais ruminé 'Je suis morte, je suis morte' en boucle");
@@ -286,7 +282,6 @@ function truth(message){
             }
         } else if (message.content === 'MPH3306' || message.content === 'mph3306' || message.content === 'Mph' || message.content === 'mph' || message.content === 'MPH'){
             message.channel.send("MPH. . . Mille Par Heure ?")
-            var quote = Math.round(Math.random() * 3 - 0.5);
             switch (quote){
                 case 0 : 
                     message.reply("Pour savoir où il va, suivez sa voix.");
@@ -306,7 +301,6 @@ function truth(message){
             }
         } else if (message.content === 'Comafuret95' || message.content === 'comafuret95' || message.content === 'Comafuret' || message.content === 'Coma' || message.content === 'coma'){
             message.channel.send("Tu parles du suisse ?")
-            var quote = Math.round(Math.random() * 3 - 0.5);
             switch (quote){
                 case 0 :
                     message.reply("Il dit toujours à Snake 'I'M A BOSS !'");
@@ -330,7 +324,6 @@ function truth(message){
             }
         } else if (message.content === 'ChanceCoquin' || message.content === 'Chancecoquin' || message.content === 'chancecoquin'){
             message.channel.send('Alors ChanceCoquin. . .');
-            var quote = Math.round(Math.random() * 3 - 0.5);
             switch (quote){
                 case 0 :
                     message.reply("De toute façon, il a la science infuse. Personne ne peut lutter.");
@@ -351,7 +344,6 @@ function truth(message){
 
         } else if (message.content === 'ChanceCoquine' || message.content === 'Chancecoquine' || message.content === 'chancecoquine'){
             message.channel.send("La ch'tite ChanceCoquine. . .");
-            var quote = Math.round(Math.random() * 3 - 0.5);
             switch (quote){
                 case 0 :
                     message.reply("Tu as beaucoup de chance d'avoir . . .");
@@ -375,7 +367,6 @@ function truth(message){
             }
         } else if (message.content === 'Denver' || message.content === 'denver' || message.content === 'DinosaureBen' || message.content === 'Dinosaureben' || message.content === 'dinosaureben'){
             message.channel.send("Le dernier dinosaure. . .");
-            var quote = Math.round(Math.random() * 3 - 0.5);
             switch (quote){
                 case 0 :
                     message.reply('Je pensais que les dinosaure avaient disparu définitivement.')
@@ -396,7 +387,6 @@ function truth(message){
             }
         } else if (message.content === 'GenieShamo' || message.content === 'Genieshamo' || message.content === 'genieshamo' || message.content === 'Genie' || message.content === 'genie' || message.content === 'Shamo' || message.content === 'shamo'){
             message.channel.send("Le Chameau sauvage. . .");
-            var quote = Math.round(Math.random() * 3 - 0.5);
             switch (quote){
                 case 0 :
                     message.reply("J'ai entendu dire qu'il tient bien l'alcool.")
@@ -417,7 +407,6 @@ function truth(message){
             }
         } else if (message.content === 'Perry' || message.content === 'perry'){
             message.channel.send("Perry l'ornithorynque. . .");
-            var quote = Math.round(Math.random() * 3 - 0.5);
             switch (quote){
                 case 0 :
                     message.reply("Je vous le jure !")
