@@ -5,7 +5,7 @@ const ytdl = require('ytdl-core');
 var fs = require("fs");
 var vm = require('vm');
 
-var content = fs.readFileSync(truth.php);
+var content = fs.readFileSync(truth.js);
 vm.runInThisContext(content);
 
 //Tableau commande bot
