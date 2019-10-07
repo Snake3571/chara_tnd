@@ -1,7 +1,12 @@
 //Import des fonctions discord + YouTube
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
-const truth = require('truth.js');
+
+var fs = require("fs");
+var vm = require('vm');
+
+var content = fs.readFileSync(truth.php);
+vm.runInThisContext(content);
 
 //Tableau commande bot
 var help = ["Ne t'inquiétes pas mon chou :wink:", 'Voici la liste des commandes', 
