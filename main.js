@@ -13,14 +13,6 @@ var help = ["Ne t'inquiétes pas mon chou :wink:", 'Voici la liste des commandes
 //Nouvelle objet "bot"
 const bot = new Discord.Client()
 
-import Traveler from 'the-traveler';
-import { ComponentType } from 'the-traveler/build/enums';
- 
-const traveler = new Traveler({
-    apikey: '98870cb9738f4a6f98a96583eb694120',
-    userAgent: 'Snake3571', //used to identify your request to the API
-});
-
 //Mise en ligne
 bot.on('ready', function () {
     console.log("Je suis connecté !")
