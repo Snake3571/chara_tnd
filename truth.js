@@ -1,16 +1,11 @@
-exports.test = function(){
-    var recup_valeur;
-    recup_valeur[0] = 'Salut';
-    recup_valeur[1] = 'Les';
-    recup_valeur[2] = 'Amis';
-    return recup_valeur; 
-}
+const Discord = require('discord.js');
+const ytdl = require('ytdl-core');
+
 
 exports.truth = function (pseudo, random){
-    var recup_valeur;
-    recup_valeur[0] = 'Salut';
-    recup_valeur[1] = 'Les';
-    recup_valeur[2] = 'Amis';
+    
+    bot.on('message', message => {
+
     if (pseudo === 'Lefaser' || pseudo === 'lefaser' || pseudo === 'faser' || pseudo === 'Faser'){
         message.channel.send("Lefaser hum. . .")
         switch (quote){
@@ -259,4 +254,5 @@ exports.truth = function (pseudo, random){
                 break;
         }
     }
+    })
 }
