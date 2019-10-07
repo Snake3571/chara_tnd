@@ -2,7 +2,7 @@
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
 
-var truth = require('./truth');
+const truth = require('./truth');
 
 //Tableau commande bot
 var help = ["Ne t'inquiétes pas mon chou :wink:", 'Voici la liste des commandes', 
@@ -64,7 +64,7 @@ bot.on('message', message => {
 
     if (message.content === '!chara test') { //isReady
         etatChara();
-        truth('Lefaser');
+        truth.truth("Lefaser");
     }
 
     if (message.content === '!chara game'){ // SI le message reçu est "!chara game" ALORS
