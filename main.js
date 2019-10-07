@@ -186,9 +186,9 @@ function etatChara(){
 }
 
 function truth(message){
-    var quote = Math.round(Math.random() * 3 - 0.5);
     const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
     collector.on('collect', message => {
+        var quote = Math.round(Math.random() * 3 - 0.5);
         if (message.content === 'Lefaser' || message.content === 'lefaser' || message.content === 'faser' || message.content === 'Faser'){
             message.channel.send("Lefaser hum. . .")
             switch (quote){
