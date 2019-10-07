@@ -1,8 +1,4 @@
-exports.myDateTime = function () {
-    return Date();
-}; 
-
-function truth (pseudo){
+exports.truth = function (pseudo){
     if (pseudo === 'Lefaser' || pseudo === 'lefaser' || pseudo === 'faser' || pseudo === 'Faser'){
         message.channel.send("Lefaser hum. . .")
         var quote = Math.round(Math.random() * 3 - 0.5);
