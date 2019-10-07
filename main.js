@@ -2,8 +2,6 @@
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
 
-const truth = require('./truth');
-
 //Tableau commande bot
 var help = ["Ne t'inquiétes pas mon chou :wink:", 'Voici la liste des commandes', 
     '!chara : Laisse moi donc me présenter', '!chara hi : Dit moi coucou', '!chara game : Joue avec moi',
