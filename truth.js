@@ -1,7 +1,18 @@
-exports.truth = function (pseudo){
+exports.test = function(){
+    var recup_valeur;
+    recup_valeur[0] = 'Salut';
+    recup_valeur[1] = 'Les';
+    recup_valeur[2] = 'Amis';
+    return recup_valeur; 
+}
+
+exports.truth = function (pseudo, random){
+    var recup_valeur;
+    recup_valeur[0] = 'Salut';
+    recup_valeur[1] = 'Les';
+    recup_valeur[2] = 'Amis';
     if (pseudo === 'Lefaser' || pseudo === 'lefaser' || pseudo === 'faser' || pseudo === 'Faser'){
         message.channel.send("Lefaser hum. . .")
-        var quote = Math.round(Math.random() * 3 - 0.5);
         switch (quote){
             case 0 : 
                 message.reply("Tu savais que Faser n'aime pas les courants éléctriques ? Il n'aime pas les DÉFASAGES");

@@ -64,7 +64,12 @@ bot.on('message', message => {
 
     if (message.content === '!chara test') { //isReady
         etatChara();
-        message.channel.send(truth.truth("Lefaser"));
+        //var quote = Math.round(Math.random() * 3 - 0.5);
+        var tableau = truth.test();
+        var i = 0;
+        while (tableau != NULL){
+            message.channel.send(tableau[i]);
+        }
     }
 
     if (message.content === '!chara game'){ // SI le message reçu est "!chara game" ALORS
