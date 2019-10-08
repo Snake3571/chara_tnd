@@ -80,6 +80,11 @@ bot.on('message', message => {
         etatChara();
     }
 
+    if (message.content === '!chara youtube ' + $args) { //isReady
+        etatChara();
+        console.log($args);
+    }
+
     if (message.content === '!chara game'){ // SI le message reçu est "!chara game" ALORS
         message.channel.send("Jouons à un jeu")
         message.channel.send("Dit moi un chiffre entre 1 et 9")
