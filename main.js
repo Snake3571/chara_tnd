@@ -121,7 +121,7 @@ bot.on('message', message => {
                 message.reply("Tu as 10 secondes. . .");
                 const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
                 collector.on('collect', message => {
-                    if (message.author != null) {
+                    if (message.content.startsWith('https://www.youtube.com/watch?v=')) {
                         isReady = false;
                         message.channel.send("Chargement en cours. . .");
                         const lien = ytdl(message.content, { filter : 'audioonly' });
@@ -136,6 +136,8 @@ bot.on('message', message => {
                             bot.user.setStatus('online');
                             isReady = true;
                         })
+                    } else {
+                        message.reply("Le lien est invalide, réessaie stp");
                     }
                 })
             })
