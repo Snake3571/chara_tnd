@@ -81,7 +81,7 @@ bot.on('message', message => {
         etatChara();
     }
 
-    if (message.content === '!chara youtube') { //isReady
+    if (message.content.startsWith('!chara youtube')) { //isReady
         const str = message.content.substring(test.length)
         message.channel.sendMessage(str)
     }
