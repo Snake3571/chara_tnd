@@ -58,8 +58,10 @@ bot.on('message', message => {
         sleep(3000);
         message.channel.send("Bon jeu ! :wink:");
     }
+
     
-    if (message.content.startsWith("Ça construit le CHARActère")) {
+    
+    if (message.content.endsWith("CHARActère")) {
         sleep(2500);
         message.channel.send("Joli jeu de mot " + message.author + " ! :wink:");
         console.log(message.author.username);
