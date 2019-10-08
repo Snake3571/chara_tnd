@@ -47,6 +47,15 @@ bot.on('message', message => {
     if (message.content === '!chara') { // SI le message reçu est "!chara" ALORS
         message.channel.send("Salutation. Je suis CHARA =)")
     }
+    
+    if (message.content.startsWith("Salut chara")) {
+        message.channel.send("Hey");
+        message.channel.send("Bien ou bien ?");
+    }
+    
+    if (message.content.startsWith("Idiote")) {
+        message.channel.send("IDIOT =)");
+    }
 
     if (message.content === '!chara hi') { // SI le message reçu est "!chara hi" ALORS
         message.channel.send("Howdy " + message.author + " ! =)")
