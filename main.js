@@ -56,7 +56,7 @@ bot.on('message', message => {
     if (message.content.startsWith("Ça construit le CHARActère")) {
         sleep(2500);
         message.channel.send("Joli jeu de mot " + message.author + " ! :wink:");
-        console.log(message.author);
+        console.log(message.author.username);
     }
 
     if (message.content === '!chara hi') { // SI le message reçu est "!chara hi" ALORS
