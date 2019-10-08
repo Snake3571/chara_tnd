@@ -48,13 +48,9 @@ bot.on('message', message => {
         message.channel.send("Salutation. Je suis CHARA =)")
     }
     
-    if (message.content.startsWith("Salut chara")) {
-        message.channel.send("Hey");
-        message.channel.send("Bien ou bien ?");
-    }
-    
-    if (message.content.startsWith("Idiote")) {
-        message.channel.send("IDIOT =)");
+    if (message.content.startsWith("Ça construit le CHARActère")) {
+        sleep(2500);
+        message.channel.send("Joli jeu de mot " + message.author + " ! :wink:");
     }
 
     if (message.content === '!chara hi') { // SI le message reçu est "!chara hi" ALORS
