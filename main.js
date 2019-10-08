@@ -50,8 +50,11 @@ bot.on('message', message => {
     if (message.content.startsWith("Je vais donc laisser le bot se présenter") && message.author.username == "Chara Dreemurr") {
         sleep(2500);
         message.channel.send("Salut tout le monde");
+        sleep(1500);
         message.channel.send("Je me présente, Chara, je suis le bot du serveur discord");
+        sleep(2000);
         message.channel.send("Pour prendre connaissance de ce que je sais faire, tapez !chara help dans le tchat");
+        sleep(3000);
         message.channel.send("Bon jeu ! :wink:");
     }
     
