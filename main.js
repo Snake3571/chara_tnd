@@ -81,9 +81,8 @@ bot.on('message', message => {
         etatChara();
     }
 
-    if (message.content.startsWith('!chara youtube')) { //isReady
-        const str = message.content.substring(test.length)
-        message.channel.sendMessage(str)
+    if (message.content.startsWith('https://www.youtube.com/watch?v=')) { //isReady
+        console.log('OK');
     }
 
     if (message.content === '!chara game'){ // SI le message reçu est "!chara game" ALORS
