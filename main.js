@@ -7,8 +7,7 @@ var help = ["Ne t'inquiétes pas mon chou :wink:", 'Voici la liste des commandes
     '!chara : Laisse moi donc me présenter', '!chara hi : Dit moi coucou', '!chara game : Joue avec moi',
     "!chara song : J'adore chanter =)", '!chara chocolate : Donne moi du chocolat (stp :yum:)',
     "!chara yt : Je vais lire une vidéo YouTube pour toi",
-    "!chara truth : La vérité sort de la bouche des enfants",
-    'Plus de commande à venir. . .']
+    "!chara truth : La vérité sort de la bouche des enfants"]
 //Nouvelle objet "bot"
 const bot = new Discord.Client()
 
