@@ -78,7 +78,7 @@ bot.on('message', message => {
 
     if (message.content.endsWith("Frisk-et")) {
         sleep(2500);
-        message.channel.send("Arrête ou tu finis dans la piscine :rage:");
+        message.channel.send("Arrête ou tu finis dans la piscine " + message.author + " :rage:");
     }
 
     if (message.content === '!chara hi') { // SI le message reçu est "!chara hi" ALORS
