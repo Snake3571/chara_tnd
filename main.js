@@ -48,7 +48,7 @@ bot.on('message', message => {
         message.channel.send("Salutation. Je suis CHARA =)")
     }
     
-    if (message.content.startsWith("Je vais donc laisser le bot se présenter") && message.author) {
+    if (message.content.startsWith("Je vais donc laisser le bot se présenter") && message.author.username == "Chara Dreemurr") {
         sleep(2500);
         message.channel.send("Joli jeu de mot " + message.author + " ! :wink:");
     }
@@ -66,7 +66,7 @@ bot.on('message', message => {
     if (message.content === '!chara help') { // SI le message reçu est "!chara help" ALORS
         var boucle = 0;
         while (help[boucle] != null){
-            message.channel.send(help[boucle])
+            message.author.send(help[boucle])
             boucle++
         }
     }
