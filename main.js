@@ -1,7 +1,6 @@
 //Import des fonctions discord + YouTube
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
-const Traveler = require('the-traveler')
 
 //Tableau commande bot
 var help = ["Ne t'inquiétes pas mon chou :wink:", 'Voici la liste des commandes', 
@@ -436,7 +435,26 @@ function truth(message){
                     message.reply("Je l'ai trouvé à faire le pitre à l'université xD")
                     message.reply("https://www.youtube.com/watch?v=m3YCOOAgQ58&t=46s")
                     break;
+            } 
+        } else if (message.content === 'Hunter' || message.content === 'hunter' || message.content === 'Teuteur' || message.content === 'teuteur'){
+            message.channel.send("Ce petit gars là, c'est TEUTEUR ! Oui c'est lui.");
+            var quote = Math.round(Math.random() * 3 - 0.5);
+            switch (quote){
+                case 0 :
+                    message.reply("Faser m'avait expliqué que pour être un bon hôte, il fallait apporter des boîtes de mouchoirs pour teuteur");
+                    sleep(1000);
+                    message.reply("On peut m'expliquer l'utilité svp ?");
+                    break;
+                case 1 : 
+                    message.reply("J'ai trouvé ça sur son armoire");
+                    message.reply("https://cdn.discordapp.com/attachments/613057368262967336/613768692341145600/20171020_195337.jpg");
+                    message.reply("Le pauvre, il a un gros rhume =(")
+                    break;
+                case 2 : 
+                    message.reply("On avait dit 14h00 cette après-midi...");
+                    message.reply("Il est arrivé à 22h00");
+                    message.reply("Il doit sûrement avoir un fuseau horaire en relation avec lui, genre HeureTeuteurienne");
+                    break;
             }
-        }
     })
 }
