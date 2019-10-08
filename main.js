@@ -68,7 +68,7 @@ bot.on('message', message => {
 
     if (message.content.endsWith("SANS-sationel")) {
         sleep(2500);
-        message.channel.send("Hum hum... C'est le comédien qui t'as appris ça, n'est-ce pas ? :knife:");
+        message.channel.send("Hum hum... C'est le comédien qui t'as appris ça, n'est-ce pas " + message.author + " ? :knife:");
     }
 
     if (message.content === '!chara hi') { // SI le message reçu est "!chara hi" ALORS
