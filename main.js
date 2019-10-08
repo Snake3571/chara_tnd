@@ -19,6 +19,7 @@ bot.on('ready', function () {
 
 //Variable boolean
 var isReady = true;
+var test = "Salut";
 
 //Variable pour la fonction sleep (1000 = 1 seconde)
 var sleep = require('system-sleep');
@@ -80,9 +81,9 @@ bot.on('message', message => {
         etatChara();
     }
 
-    if (message.content === '!chara youtube ' + $args) { //isReady
-        etatChara();
-        console.log($args);
+    if (message.content === '!chara youtube') { //isReady
+        const str = message.content.substring(test.length)
+        message.channel.sendMessage(str)
     }
 
     if (message.content === '!chara game'){ // SI le message reçu est "!chara game" ALORS
