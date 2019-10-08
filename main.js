@@ -71,6 +71,16 @@ bot.on('message', message => {
         message.channel.send("Hum hum... C'est le comédien qui t'as appris ça, n'est-ce pas " + message.author + " ? :knife:");
     }
 
+    if (message.content.endsWith("TU-toriel")) {
+        sleep(2500);
+        message.channel.send(". . . Stop " + message.author + ". Vraiment, stop. Asriel me manque :pensive:");
+    }
+
+    if (message.content.endsWith("Frisk-et")) {
+        sleep(2500);
+        message.channel.send("Arrête ou tu finis dans la piscine :rage:");
+    }
+
     if (message.content === '!chara hi') { // SI le message reçu est "!chara hi" ALORS
         message.channel.send("Howdy " + message.author + " ! =)")
     }
