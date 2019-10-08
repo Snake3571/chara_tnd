@@ -456,5 +456,6 @@ function truth(message){
                     message.reply("Il doit sûrement avoir un fuseau horaire en relation avec lui, genre HeureTeuteurienne");
                     break;
             }
+        }
     })
 }
