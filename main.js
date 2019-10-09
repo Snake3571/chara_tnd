@@ -19,7 +19,6 @@ bot.on('ready', function () {
 
 //Variable boolean
 var isReady = true;
-var test = "Salut";
 
 //Variable pour la fonction sleep (1000 = 1 seconde)
 var sleep = require('system-sleep');
@@ -59,8 +58,6 @@ bot.on('message', message => {
         message.channel.send("Bon jeu ! :wink:");
     }
 
-    
-    
     if (message.content.endsWith("CHARActère")) {
         sleep(2500);
         message.channel.send("Joli jeu de mot " + message.author + " ! :wink:");
@@ -137,7 +134,7 @@ bot.on('message', message => {
                 message.reply("Tu as 10 secondes. . .");
                 const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
                 collector.on('collect', message => {
-                    if (message.content.startsWith('https://www.youtube.com/watch?v=')) {
+                    if (message.content.startsWith('https://www.youtube.com/watch?v=') || message.content.startsWith('https://youtu.be/')) {
                         isReady = false;
                         message.channel.send("Chargement en cours. . .");
                         const lien = ytdl(message.content, { filter : 'audioonly' });
