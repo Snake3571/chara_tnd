@@ -73,7 +73,7 @@ bot.on('message', message => {
         message.channel.send(". . . Stop " + message.author + ". Vraiment, stop. Asriel me manque :pensive:");
     }
 
-    if (message.content.endsWith("Frisk-et")) {
+    if (message.content.endsWith("FRISK-et")) {
         sleep(2500);
         message.channel.send("Arrête ou tu finis dans la piscine " + message.author + " :rage:");
     }
