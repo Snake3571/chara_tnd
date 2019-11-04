@@ -192,7 +192,7 @@ bot.on('message', message => {
 
     if (message.content === '!chara question'){
         message.channel.send("Pose moi donc ta question " + message.author);
-        
+        question(message);
     }
 })
 
