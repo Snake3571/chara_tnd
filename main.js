@@ -7,7 +7,8 @@ var help = ["Ne t'inquiétes pas mon chou :wink:", 'Voici la liste des commandes
     '!chara : Laisse moi donc me présenter', '!chara hi : Dit moi coucou', '!chara game : Joue avec moi',
     "!chara song : J'adore chanter =)", '!chara chocolate : Donne moi du chocolat (stp :yum:)',
     "!chara yt : Je vais lire une vidéo YouTube pour toi",
-    "!chara truth : La vérité sort de la bouche des enfants"]
+    "!chara truth : La vérité sort de la bouche des enfants",
+    "!chara question : Pose moi une question"];
 //Nouvelle objet "bot"
 const bot = new Discord.Client()
 
@@ -92,10 +93,6 @@ bot.on('message', message => {
 
     if (message.content === '!chara test') { //isReady
         etatChara();
-    }
-
-    if (message.content.startsWith('https://www.youtube.com/watch?v=')) { //isReady
-        console.log('OK');
     }
 
     if (message.content === '!chara game'){ // SI le message reçu est "!chara game" ALORS
@@ -190,6 +187,13 @@ bot.on('message', message => {
         message.channel.send("Qui va t'on jugé aujourd'hui ?")
         message.reply('Dit moi un nom. . .')
         truth(message);
+    }
+
+    if (message.content === '!chara question'){
+        message.channel.send("Pose moi donc ta question " + message.author);
+        sleep(7000);
+        message.channel.send("Nan mais je déconne tu me prends pour qui ?");
+        message.channel.send("J'AI PAS LA SCIENCE INFUSE IDIOT =)");
     }
 })
 
