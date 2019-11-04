@@ -9,6 +9,7 @@ var help = ["Ne t'inquiétes pas mon chou :wink:", 'Voici la liste des commandes
     "!chara yt : Je vais lire une vidéo YouTube pour toi",
     "!chara truth : La vérité sort de la bouche des enfants",
     "!chara question : Pose moi une question"];
+
 //Nouvelle objet "bot"
 const bot = new Discord.Client()
 
@@ -191,9 +192,7 @@ bot.on('message', message => {
 
     if (message.content === '!chara question'){
         message.channel.send("Pose moi donc ta question " + message.author);
-        sleep(7000);
-        message.channel.send("Nan mais je déconne tu me prends pour qui ?");
-        message.channel.send("J'AI PAS LA SCIENCE INFUSE IDIOT =)");
+        
     }
 })
 
@@ -223,6 +222,16 @@ function etatChara(){
             bot.user.setActivity("Frisk manger du chocolat" , { type: "WATCHING"});
             break;
     }
+}
+
+function question(message){
+    const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+    collector.on('collect', message => {
+        if (message.content.endsWith("?")){
+            message.channel.send("Nan mais je déconne en fait, en vrai tu me prends pour qui ?");
+            message.channel.send("J'AI PAS LA SCIENCE INFUSE IDIOT =)");
+        }
+    })
 }
 
 function truth(message){
