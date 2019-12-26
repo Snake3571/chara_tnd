@@ -230,6 +230,7 @@ function question(message){
         if (message.content.endsWith("?")){
             message.channel.send("Nan mais je déconne en fait, en vrai tu me prends pour qui ?");
             message.channel.send("J'AI PAS LA SCIENCE INFUSE IDIOT =)");
+            message.channel.send("ET PUIS JE NE TRAVAILLE PAS DANS LA RESTAURATION, QUE-CE QUE J'EN SAIS ?");
         }
     })
 }
