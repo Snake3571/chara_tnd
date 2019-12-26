@@ -228,8 +228,11 @@ function question(message){
     const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
     collector.on('collect', message => {
         if (message.content.endsWith("?")){
+            sleep(1000);
             message.channel.send("Nan mais je déconne en fait, en vrai tu me prends pour qui ?");
+            sleep(1000);
             message.channel.send("J'AI PAS LA SCIENCE INFUSE IDIOT =)");
+            sleep(1000);
             message.channel.send("ET PUIS JE NE TRAVAILLE PAS DANS LA RESTAURATION, QUE-CE QUE J'EN SAIS ?");
         }
     })
